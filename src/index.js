@@ -5,7 +5,7 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 
-const API_KEY = 'AIzaSyBeBn1AyqgW-JF5xSGj-MYSYR_3tSEjUNE';
+const API_KEY = 'AIzaSyB-VROu42pk0db601e7icZJvqKwfnzvzkk';
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ class App extends Component {
       selectedVideo: null
 		}
 		
-		// this.videoSearch('surfboards');
+	  this.videoSearch('surfboards');
 	}
 	
 	videoSearch(term) {
@@ -28,10 +28,10 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				
+				<VideoList videos={this.state.videos}/>
 			</div>
 		);
 	}
 }
 
-ReactDOM.render(<App />, document.querySelector('.container'));
+ReactDOM.render(<App/>, document.querySelector('.container'));
